@@ -576,6 +576,134 @@ progress {
   margin-right: 0.5rem;
 }
 
+.fab {
+  color: #333;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* HTML5 */
+.fa-html5 {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-html5:hover {
+  color: #E44D26;
+  transform: scale(1.5);
+}
+
+/* CSS3 */
+.fa-css3-alt {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-css3-alt:hover {
+  color: #2965F1;
+  transform: scale(1.5);
+}
+
+/* JavaScript */
+.fa-js {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-js:hover {
+  color: #F7DF1E;
+  transform: scale(1.5);
+}
+
+/* React */
+.fa-react {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-react:hover {
+  color: #61DAFB;
+  transform: scale(1.5);
+}
+
+/* Node.js */
+.fa-node-js {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-node-js:hover {
+  color: #68A063;
+  transform: scale(1.5);
+}
+
+/* WordPress */
+.fa-wordpress {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-wordpress:hover {
+  color: #21759B;
+  transform: scale(1.5);
+}
+
+/* NPM */
+.fa-npm {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-npm:hover {
+  color: #CB3837;
+  transform: scale(1.5);
+}
+
+/* Vue.js */
+.fa-vuejs {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-vuejs:hover {
+  color: #41B883;
+  transform: scale(1.5);
+}
+
+/* PHP */
+.fa-php {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-php:hover {
+  color: #777BB4;
+  transform: scale(1.5);
+}
+
+/* Laravel */
+.fa-laravel {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-laravel:hover {
+  color: #FF2D20;
+  transform: scale(1.5);
+}
+
+/* Symfony */
+.symfony-logo {
+  filter: contrast(20%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.symfony-logo:hover {
+  filter: contrast(150%);
+  transform: scale(1.5);
+}
+
+/* ThreeJS */
+.threejs-logo {
+  filter: contrast(20%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.threejs-logo:hover {
+  filter: contrast(150%);
+  transform: scale(1.5);
+}
+
 .initialism {
   font-size: 0.875em;
   text-transform: uppercase;
@@ -1739,6 +1867,15 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
+
+/* Sticky effect for sections */
+
+
+
+/* --------------- */
+
+
+
 .table {
   --bs-table-color: var(--bs-body-color);
   --bs-table-bg: transparent;
@@ -10944,29 +11081,46 @@ p.lead {
   font-size: 3rem;
 }
 
+/* Active le scroll-snapping sur le conteneur parent */
+html, body {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-y: scroll;
+  margin: 0;
+}
+
+/* Applique le scroll-snapping à chaque section */
 section.resume-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  justify-content: center;
+  padding: 3rem 1rem; /* Un padding un peu plus relax */
   max-width: 75rem;
 }
+
 section.resume-section .resume-section-content {
   width: 100%;
 }
 
+/* Pour les écrans de 768px et plus */
 @media (min-width: 768px) {
   section.resume-section {
-    min-height: 100vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem; /* On adoucit un peu les espaces */
   }
 }
+
+/* Pour les écrans de 992px et plus */
 @media (min-width: 992px) {
   section.resume-section {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem; /* Toujours smooth mais avec un peu plus d’espace */
   }
 }

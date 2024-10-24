@@ -32,3 +32,42 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+// let ticking = false;
+
+// document.addEventListener('wheel', function(event) {
+//   if (!ticking) {
+//     ticking = true;
+    
+//     setTimeout(function() {
+//       const direction = event.deltaY > 0 ? 1 : -1;
+//       window.scrollBy({ top: direction * window.innerHeight, left: 0, behavior: 'smooth' });
+//       ticking = false;
+//     }, 100); // Le temps peut être ajusté pour rendre ça plus ou moins smooth
+//   }
+  
+//   event.preventDefault();
+// }, { passive: false });
+
+
+// const sections = document.querySelectorAll('section.resume-section');
+
+// const observerOptions = {
+//   threshold: 0.5
+// };
+
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       entry.target.scrollIntoView({
+//         behavior: 'smooth',
+//         block: 'start'
+//       });
+//     }
+//   });
+// }, observerOptions);
+
+// sections.forEach(section => {
+//   observer.observe(section);
+// });
